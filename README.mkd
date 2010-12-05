@@ -1,10 +1,6 @@
-* Usage
+# Usage
 
     :Unite qf	"unite quickfix result
     :Unite qf:enc=utf-8 "iconv(getqflist(),enc,&enc)
     :Unite qf:enc=utf-8:ex= "show prompt for ex-command (ex. grep, vimgrep, make)
     :Unite qf:enc=utf-8:ex=grep\ vim\ ~/vimfiles/* "specify ex-command
-
-<!--
- vim:set ft=markdown:
- -->
