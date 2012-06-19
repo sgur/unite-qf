@@ -3,6 +3,9 @@
 " Usage: Unite qf:enc=utf-8:ex= "show prompt for ex-command (ex. grep, vimgrep, make)
 " Usage: Unite qf:enc=utf-8:ex=grep\ vim\ ~/vimfiles/* "specify ex-command
 
+let s:save_cpo = &cpo
+set cpo&vim
+
 function! unite#sources#qf#define()"{{{
   return s:source
 endfunction"}}}
@@ -34,4 +37,8 @@ function! s:source.gather_candidates(args, context) "{{{
         \ "action__pattern": v:val.pattern
         \ }')
 endfunction "}}}
+
+let &cpo = s:save_cpo
+unlet s:save_cpo
+
 " vim:set foldmethod=marker:
