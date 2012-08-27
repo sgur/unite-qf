@@ -14,6 +14,12 @@ let s:source = {
       \ 'name': 'qf'
       \ }
 
+function! s:source.complete(args, context, arglead, cmdline, cursorpos)
+  let arglead = matchstr(a:arglead, '[:^]\zs.\+$')
+  let options=['enc=', 'ex=']
+  return filter(options, 'stridx(v:val, arglead)>=0')
+endfunction
+
 function! s:source.gather_candidates(args, context) "{{{
   let l:enc = ''
   for l:arg in a:args
