@@ -34,7 +34,8 @@ function! s:source.gather_candidates(args, context) "{{{
         \ "kind": "jump_list",
         \ "action__path": bufname(v:val.bufnr),
         \ "action__line": v:val.lnum,
-        \ "action__pattern": v:val.pattern
+        \ "action__pattern": v:val.pattern,
+        \ "is_multiline" : 1,
         \ }')
 endfunction "}}}
 
