@@ -11,7 +11,8 @@ function! unite#sources#qf#define()"{{{
 endfunction"}}}
 
 let s:source = {
-      \ 'name': 'qf'
+      \ 'name': 'qf',
+      \ 'description': 'candidates from quickfix list'
       \ }
 
 function! s:source.complete(args, context, arglead, cmdline, cursorpos)

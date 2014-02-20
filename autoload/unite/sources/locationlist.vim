@@ -9,7 +9,8 @@ function! unite#sources#locationlist#define()"{{{
 endfunction"}}}
 
 let s:source = {
-      \ 'name': 'locationlist'
+      \ 'name': 'locationlist',
+      \ 'description': 'candidates from location list'
       \ }
 
 function! s:source.complete(args, context, arglead, cmdline, cursorpos)
