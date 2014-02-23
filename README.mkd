@@ -1,6 +1,11 @@
 # Usage
 
+A plugin that lets you use the quickfix and/or location lists as sources for unite.vim
+
     :Unite qf	"unite quickfix result
     :Unite qf:enc=utf-8 "iconv(getqflist(),enc,&enc)
     :Unite qf:enc=utf-8:ex= "show prompt for ex-command (ex. grep, vimgrep, make)
     :Unite qf:enc=utf-8:ex=grep\ vim\ ~/vimfiles/* "specify ex-command
+
+    :Unite locationlist	"unite locationlist result
+    :Unite locationlist:enc=utf-8 "iconv(getloclist(),enc,&enc)
